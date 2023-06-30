@@ -5,8 +5,8 @@ Webcam.set({
     png_quality:90
   });
   
-  var camera=document.getElementById("camera");
-  Webcam.attach("#camera");
+  var camera=document.getElementById("img");
+  Webcam.attach("#img");
   
   function Tirar_Foto(){
     Webcam.snap(
@@ -17,9 +17,9 @@ Webcam.set({
   }
   console.log("versão ml5:", ml5.version);
   
-  var classifier = ml5.imageClassifier(https:/teachablemachine.withgoogle.com/models/vD3USY8oG/1,modelLoaded);
+  var classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/vD3USY8oG/model.json",modelLoaded);
   function modelLoaded(){
-    console.log("Modelo carregado!")
+    console.log("Modelo carregado!");
   }
   
   function Checar(){
